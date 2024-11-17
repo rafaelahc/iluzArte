@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+
+section, header {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+section {
+    padding: 3rem 2rem;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: #ffe6e6;
+    padding: 0 2rem;
+    border-bottom: 1px solid;
+    z-index: 19
+}
+
+
+.home {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    border: 1px solid;
+}
+
+.home-content {
+    flex: 1 1 50%;
+}
+
+.home-carousel {
+    flex: 1 1 50%;
+}
+
+.home > div{
+    border: 1px solid;
+}
+
+
+
+
+#carouselExampleFade {
+    height: 100vh; /* 100% da altura da tela */
+    overflow: hidden; 
+  }
+  
+  .carousel-inner {
+    height: 100%; /* O contêiner do carrossel deve ocupar 100% da altura do carrossel */
+  }
+  
+  .carousel-item {
+    width: 1080px;
+    height: 1350px /* Cada item do carrossel vai ocupar 100% da altura */
+  }
+  
+  .carousel-item img {
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível sem deformar */
+    height: 100%; /* Faz a imagem ocupar 100% da altura do item */
+    width: 100%; /* Faz a imagem ocupar 100% da largura do item */
+  }
+
+
+  /* Produtos */
+.card-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+    
