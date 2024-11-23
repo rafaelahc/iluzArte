@@ -6,20 +6,28 @@
     box-sizing: border-box;
     font-family: "Poppins", serif;
     transition: 0.2s;
+    list-style: none;
     background-color: #f3e9ec;
+}
+
+html {
+    scroll-padding-top: 5rem;
 }
 
 /* Geral */
 
-/* Tags */
+    /* Tags */
 
+body {
+    background-color: #f3e9ec!important;
+}
 
 a {
     text-decoration: none!important;
 }
 
 section  {
-    padding: 0 2rem;
+    padding: 1rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -28,14 +36,12 @@ img {
     border-radius: 5px!important;
 }
 
-
-/* Classes */
+     /* Classes gerais*/
 
 .flex {
     display: flex;
     flex-direction: column;
     align-items: center;
-  
 }
 
 .page-title {
@@ -57,6 +63,21 @@ img {
     border: 1px solid #7e5454;
 }
 
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.175);
+    border-radius: 5px;
+}
+
+
+.home, .products, .about, .contact {
+    height: 100vh;
+}
+
 /* CABEÇALHO - NAVBAR */
 
 header {
@@ -64,10 +85,35 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    display: none;
+    z-index: 20;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.175);
 }
 
+.navbar a {
+    text-transform: uppercase;
+    color: #5a3c3c;
+}    
+
+
+
+/* HOME */
+.home, .checkout {
+    padding: 7rem 0;
+}
+
+
+.home .content-wrapper {
+    border: none;
+}
+
+.home-content h3 {
+    font-size: 2.75rem;
+    font-weight: bold;
+}
+
+
 /* COMO FUNCIONA */
+
 
 .options-link {
     color: #815252;
@@ -124,73 +170,154 @@ header {
     font-weight: bolder;
 }
 
-/* SOBRE */
+/* SOBRE E CONTACTO */
 
-.about-container {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
-}
-
-.about-content, .about-image {
+.about-content, .about-image,
+.contact-content, .form, .home-content, .home-image {
     width: calc(50% - 1rem);
 }
 
+/* SOBRE */
 
-.about-content p {
-    font-size: 18px;
-    line-height: 30px;  
+.about-content, .home-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 1rem;
+}
+
+.about-content p, .home-content p{
+    font-size: 20px;
+    line-height: 35px;  
 }
 
 .about-text-called {
     margin-top: 70px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
     color: #5a3c3c;
 }
 
-
-
 .about-image img {
     width: 100%;
     height: 100%;
+    padding: 10px;
 }
 
+/* Contacto */
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 7rem 0;
+}
+
+.contact-content i {
+    color: #5a3c3c;
+}
+
+
+/* Form */
+
+.form {
+    padding: 1rem;
+}
+
+
+.form h3 {
+    font-size: 17px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form-label {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #5a3c3c;
+    margin-bottom: 0!important;
+}
+
+.form-checkout {
+    width: 100%;
+}
+
+/* RODAPÉ */
+
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.175);
+    padding: 1rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-menu a {
+    color: #5a3c3c;
+    text-decoration: none;
+}
+
+footer .footer-menu a:hover {
+    color: #795353;
+}
+
+.payment-ways, .footer-social-medias {
+    text-align: center;
+}
+
+.payment-ways img {
+    width: 100px;
+    height: 30px;
+}
+
+.fa-brands{
+    font-size: 25px;
+    color: #5a3c3c;
+    margin: 5px;
+}
+
+.fa-brands:hover {
+    color: #795353;
+}
 
 
 
 /* RESPONSIVIDADE */
 
-
-@media only screen and (max-width: 600px) {}
-
-
 @media only screen and (max-width: 719px) {
+    .how-it-works {
+        padding: 10rem 2rem;
+    }
+
     /* produtos */
     .card {
         width: 100%;
     }
-
-    /* About */
-    .about-content, .about-image {
-        width: 100%;
-    }
 }
-
-
-@media only screen and (min-width: 768px) {
-
-}
-
 
 @media only screen and (min-width: 992px) {
+    header {
+        padding: 0 5rem;
+    }
+
+    /* Como funciona */
     .card-how-it-works {
         flex: 1 1 calc(33.333% - 1rem);
     }
 }
 
+@media only screen and (max-width: 992px) {
+    /* Sobre */
+    .about-content, .about-image, .home-content, .home-image, .contact-content, .form {
+        width: 100%;
+    }
+}
 
-@media only screen and (min-width: 1200px) {}
+
